@@ -845,6 +845,7 @@ export function startReminderScheduler(): () => void {
 
   const handleDataChanged = () => {
     syncScheduledHabitAlarms();
+    runActiveRemindersCheck();
   };
 
   if (typeof window !== "undefined") {
@@ -854,6 +855,7 @@ export function startReminderScheduler(): () => void {
     window.addEventListener("focusflow-data-changed", handleDataChanged);
     window.addEventListener("focusflow-db-synced", handleDataChanged);
     window.addEventListener("focusflow-srs-reminder-changed", handleDataChanged);
+    window.addEventListener("focusflow-reminders-reschedule", handleDataChanged);
   }
 
   return () => {
@@ -865,6 +867,7 @@ export function startReminderScheduler(): () => void {
       window.removeEventListener("focusflow-data-changed", handleDataChanged);
       window.removeEventListener("focusflow-db-synced", handleDataChanged);
       window.removeEventListener("focusflow-srs-reminder-changed", handleDataChanged);
+      window.removeEventListener("focusflow-reminders-reschedule", handleDataChanged);
     }
   };
 }

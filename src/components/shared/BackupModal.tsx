@@ -687,12 +687,34 @@ export default function BackupModal({ isOpen, onClose, onSuccess }: Props) {
         ...(localDataObj["focusflow_srs_reminder_settings"] || {})
       };
 
-      // تاریخ کنکور و امتحانات نهایی
+      // تاریخ کنکور و امتحانات نهایی و حالت امن و تم
       merged["focusflow_konkur_date"] = localDataObj["focusflow_konkur_date"] || serverData["focusflow_konkur_date"] || "2027-06-25";
       merged["focusflow_final_exams_date"] = localDataObj["focusflow_final_exams_date"] || serverData["focusflow_final_exams_date"] || "2027-05-20";
       merged["focusflow_active_preset_id"] = localDataObj["focusflow_active_preset_id"] || serverData["focusflow_active_preset_id"] || "default";
       merged["focusflow_safe_mode"] = localDataObj["focusflow_safe_mode"] !== undefined ? localDataObj["focusflow_safe_mode"] : (serverData["focusflow_safe_mode"] || "true");
       merged["focusflow-theme"] = localDataObj["focusflow-theme"] || serverData["focusflow-theme"] || "dark";
+
+      // اوقات شرعی، شهر و استان و دقیقه احتیاط
+      merged["focusflow_prayer_province"] = localDataObj["focusflow_prayer_province"] || serverData["focusflow_prayer_province"] || "تهران";
+      merged["focusflow_prayer_city"] = localDataObj["focusflow_prayer_city"] || serverData["focusflow_prayer_city"] || "تهران";
+      merged["focusflow_prayer_offset"] = localDataObj["focusflow_prayer_offset"] !== undefined ? localDataObj["focusflow_prayer_offset"] : (serverData["focusflow_prayer_offset"] ?? 0);
+
+      // فایل‌های صوتی اختصاصی آلارم‌ها
+      merged["focusflow_custom_audio_sounds"] = {
+        ...(serverData["focusflow_custom_audio_sounds"] || {}),
+        ...(localDataObj["focusflow_custom_audio_sounds"] || {})
+      };
+
+      // الگوهای اختصاصی روزهای تقویم و پلنر
+      merged["focusflow_custom_applied_dates"] = {
+        ...(serverData["focusflow_custom_applied_dates"] || {}),
+        ...(localDataObj["focusflow_custom_applied_dates"] || {})
+      };
+
+      // حد نصاب پلنر و تنظیمات تکمیلی
+      merged["focusflow_planner_threshold"] = localDataObj["focusflow_planner_threshold"] !== undefined ? localDataObj["focusflow_planner_threshold"] : (serverData["focusflow_planner_threshold"] ?? 80);
+      merged["focusflow_last_intro_time"] = localDataObj["focusflow_last_intro_time"] || serverData["focusflow_last_intro_time"] || null;
+      merged["focusflow_active_note_id"] = localDataObj["focusflow_active_note_id"] || serverData["focusflow_active_note_id"] || null;
 
       // ذخیره‌سازی داده‌های ادغام شده روی کلاینت (localStorage)
       const mergedStr = JSON.stringify(merged);

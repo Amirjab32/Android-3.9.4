@@ -437,7 +437,9 @@ export const PrayerSettingsService = {
         this.setCity(firstCity.name);
       }
     }
+    localStorage.setItem("focusflow_local_mtime", Date.now().toString());
     window.dispatchEvent(new CustomEvent("focusflow-prayer-settings-changed"));
+    window.dispatchEvent(new CustomEvent("focusflow-data-changed", { detail: { key: "focusflow_prayer_province" } }));
   },
   getCity(): string {
     if (typeof window === "undefined") return "تهران";
@@ -450,7 +452,9 @@ export const PrayerSettingsService = {
     if (found) {
       localStorage.setItem("focusflow_prayer_province", found.province);
     }
+    localStorage.setItem("focusflow_local_mtime", Date.now().toString());
     window.dispatchEvent(new CustomEvent("focusflow-prayer-settings-changed"));
+    window.dispatchEvent(new CustomEvent("focusflow-data-changed", { detail: { key: "focusflow_prayer_city" } }));
   },
   getCitiesByProvince(province: string): CityCoord[] {
     return IRAN_CITIES.filter((c) => c.province === province);
@@ -463,6 +467,8 @@ export const PrayerSettingsService = {
   setOffset(offset: number): void {
     if (typeof window === "undefined") return;
     localStorage.setItem("focusflow_prayer_offset", offset.toString());
+    localStorage.setItem("focusflow_local_mtime", Date.now().toString());
     window.dispatchEvent(new CustomEvent("focusflow-prayer-settings-changed"));
+    window.dispatchEvent(new CustomEvent("focusflow-data-changed", { detail: { key: "focusflow_prayer_offset" } }));
   }
 };

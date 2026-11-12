@@ -20,6 +20,7 @@ import PlannerFloatingTimer from "@/components/planner/PlannerFloatingTimer";
 import PrayerTimelineBar from "@/components/prayer/PrayerTimelineBar";
 import { TimeCheckService } from "@/lib/timeCheck";
 import { startReminderScheduler, runActiveRemindersCheck } from "@/lib/notifications";
+import { AudioStorageService } from "@/lib/audioStorage";
 import IntroStressOverlay from "@/components/shared/IntroStressOverlay";
 import BackupModal from "@/components/shared/BackupModal";
 import DeleteConfirmationModal from "@/components/shared/DeleteConfirmationModal";
@@ -95,6 +96,7 @@ function AppContent() {
     // Check on mount
     checkIntro();
     TimeCheckService.init();
+    AudioStorageService.getAllAudio().catch(() => {});
 
     // راه‌اندازی بررسی مستمر یادآورهای عادت‌ها و تسک‌ها
     const stopReminders = startReminderScheduler();

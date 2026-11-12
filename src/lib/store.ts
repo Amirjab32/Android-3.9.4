@@ -1,3 +1,5 @@
+import { AudioStorageService } from "./audioStorage";
+
 export interface TaskInterval {
   id: string;
   started_at: number;
@@ -1199,7 +1201,40 @@ export function exportDatabase(): string {
   data["focusflow_safe_mode"] = localStorage.getItem("focusflow_safe_mode") || "true";
   data["focusflow-theme"] = localStorage.getItem("focusflow-theme") || "dark";
 
-  // همگام‌سازی وضعیت زنده تایمر پلنر بین تمام دستگاه‌ها
+  // ۱. تنظیمات کامل اوقات شرعی، شهر، استان و دقیقه احتیاط
+  data["focusflow_prayer_province"] = localStorage.getItem("focusflow_prayer_province") || "تهران";
+  data["focusflow_prayer_city"] = localStorage.getItem("focusflow_prayer_city") || "تهران";
+  data["focusflow_prayer_offset"] = parseInt(localStorage.getItem("focusflow_prayer_offset") || "0", 10);
+
+  // ۲. فایل‌های صوتی اختصاصی آپلود شده برای زنگ و آلارم‌ها
+  try {
+    const rawCustomAudio = localStorage.getItem("focusflow_custom_audio_sounds");
+    data["focusflow_custom_audio_sounds"] = rawCustomAudio ? JSON.parse(rawCustomAudio) : {};
+  } catch {
+    data["focusflow_custom_audio_sounds"] = {};
+  }
+
+  // ۳. وضعیت الگوهای اختصاصی اعمال‌شده روی روزهای تقویم و پلنر
+  const customAppliedDates: Record<string, string> = {};
+  try {
+    if (typeof window !== "undefined" && window.localStorage) {
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith("focusflow_custom_applied_")) {
+          const datePart = key.replace("focusflow_custom_applied_", "");
+          customAppliedDates[datePart] = localStorage.getItem(key) || "custom";
+        }
+      }
+    }
+  } catch {}
+  data["focusflow_custom_applied_dates"] = customAppliedDates;
+
+  // ۴. حد نصاب موفقیت پلنر، یادداشت فعال و وضعیت اینترو
+  data["focusflow_planner_threshold"] = parseInt(localStorage.getItem("focusflow_planner_threshold") || "80", 10);
+  data["focusflow_last_intro_time"] = localStorage.getItem("focusflow_last_intro_time") || null;
+  data["focusflow_active_note_id"] = localStorage.getItem("focusflow_active_note_id") || null;
+
+  // ۵. همگام‌سازی وضعیت زنده تایمر پلنر بین تمام دستگاه‌ها
   const activeTimerRaw = localStorage.getItem("focusflow_active_planner_timer");
   data["focusflow_active_planner_timer"] = activeTimerRaw ? JSON.parse(activeTimerRaw) : null;
 
@@ -1219,7 +1254,9 @@ export function importDatabase(jsonString: string, forceOverride: boolean = fals
     // تایید ساختار معتبر
     const hasKnownKey = BACKUP_KEYS.some((key) => key in parsed) ||
       "focusflow_konkur_date" in parsed ||
-      "focusflow_planner" in parsed;
+      "focusflow_planner" in parsed ||
+      "focusflow_habits" in parsed ||
+      "focusflow_prayer_city" in parsed;
 
     if (!hasKnownKey && Object.keys(parsed).length > 0) {
       return false;
@@ -1229,10 +1266,12 @@ export function importDatabase(jsonString: string, forceOverride: boolean = fals
       if (parsed[key] !== undefined) {
         if (Array.isArray(parsed[key]) || typeof parsed[key] === "object") {
           localStorage.setItem(key, JSON.stringify(parsed[key]));
+        } else {
+          localStorage.setItem(key, String(parsed[key]));
         }
       } else if (forceOverride) {
         // اعمال حاکمیت کامل فایل: پاک‌سازی هر داده محلی که در فایل جدید وجود ندارد
-        if (key === "focusflow_going_up_settings" || key === "focusflow_going_up_state") {
+        if (key === "focusflow_going_up_settings" || key === "focusflow_going_up_state" || key === "focusflow_srs_reminder_settings") {
           localStorage.setItem(key, JSON.stringify({}));
         } else {
           localStorage.setItem(key, JSON.stringify([]));
@@ -1264,7 +1303,44 @@ export function importDatabase(jsonString: string, forceOverride: boolean = fals
       localStorage.setItem("focusflow-theme", parsed["focusflow-theme"]);
     }
 
-    // همگام‌سازی بلادرنگ تایمر فعال پلنر
+    // ۱. اعمال و بازنشانی تنظیمات اوقات شرعی
+    if (parsed["focusflow_prayer_province"]) {
+      localStorage.setItem("focusflow_prayer_province", parsed["focusflow_prayer_province"]);
+    }
+    if (parsed["focusflow_prayer_city"]) {
+      localStorage.setItem("focusflow_prayer_city", parsed["focusflow_prayer_city"]);
+    }
+    if (parsed["focusflow_prayer_offset"] !== undefined) {
+      localStorage.setItem("focusflow_prayer_offset", String(parsed["focusflow_prayer_offset"]));
+    }
+
+    // ۲. بازیابی صداهای اختصاصی آلارم در حافظه کش و دیتابیس صوتی IndexedDB
+    if (parsed["focusflow_custom_audio_sounds"] && typeof parsed["focusflow_custom_audio_sounds"] === "object") {
+      try {
+        localStorage.setItem("focusflow_custom_audio_sounds", JSON.stringify(parsed["focusflow_custom_audio_sounds"]));
+        AudioStorageService.saveAllAudio(parsed["focusflow_custom_audio_sounds"]).catch(() => {});
+      } catch {}
+    }
+
+    // ۳. بازیابی الگوهای اعمال‌شده روی روزهای پلنر
+    if (parsed["focusflow_custom_applied_dates"] && typeof parsed["focusflow_custom_applied_dates"] === "object") {
+      Object.entries(parsed["focusflow_custom_applied_dates"]).forEach(([date, val]) => {
+        localStorage.setItem(`focusflow_custom_applied_${date}`, String(val));
+      });
+    }
+
+    // ۴. حد نصاب موفقیت پلنر، یادداشت فعال و اینترو
+    if (parsed["focusflow_planner_threshold"] !== undefined) {
+      localStorage.setItem("focusflow_planner_threshold", String(parsed["focusflow_planner_threshold"]));
+    }
+    if (parsed["focusflow_last_intro_time"]) {
+      localStorage.setItem("focusflow_last_intro_time", String(parsed["focusflow_last_intro_time"]));
+    }
+    if (parsed["focusflow_active_note_id"]) {
+      localStorage.setItem("focusflow_active_note_id", String(parsed["focusflow_active_note_id"]));
+    }
+
+    // ۵. همگام‌سازی بلادرنگ تایمر فعال پلنر
     if ("focusflow_active_planner_timer" in parsed) {
       const prevTimerRaw = localStorage.getItem("focusflow_active_planner_timer");
       const newTimer = parsed["focusflow_active_planner_timer"];
@@ -1285,6 +1361,14 @@ export function importDatabase(jsonString: string, forceOverride: boolean = fals
       if (typeof window !== "undefined") {
         window.dispatchEvent(new CustomEvent("focusflow-planner-timer-change", { detail: null }));
       }
+    }
+
+    // ۶. اطلاع‌رسانی سراسری به سیستم‌های اندروید و فرانت‌اند برای زمان‌بندی مجدد خودکار آلارم‌ها و بروزرسانی نما
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("focusflow-prayer-settings-changed"));
+      window.dispatchEvent(new CustomEvent("focusflow-srs-reminder-changed"));
+      window.dispatchEvent(new CustomEvent("focusflow-reminders-reschedule"));
+      window.dispatchEvent(new CustomEvent("focusflow-data-changed", { detail: { key: "database_import" } }));
     }
 
     return true;

@@ -981,12 +981,17 @@
     }
   ],
   "focusflow_planner_presets": [],
-  "focusflow_planner_threshold": [],
+  "focusflow_planner_threshold": 80,
   "focusflow_srs_reminder_settings": {},
   "focusflow_konkur_date": "2027-06-25",
   "focusflow_final_exams_date": "2027-05-20",
   "focusflow_active_preset_id": "default",
   "focusflow_safe_mode": "true",
   "focusflow-theme": "dark",
-  "focusflow_active_planner_timer": null
+  "focusflow_active_planner_timer": null,
+  "focusflow_prayer_province": "تهران",
+  "focusflow_prayer_city": "تهران",
+  "focusflow_prayer_offset": 0,
+  "focusflow_custom_audio_sounds": {},
+  "focusflow_custom_applied_dates": {}
 }
