@@ -1,0 +1,713 @@
+{
+  "focusflow_tasks": [
+    {
+      "title": "گیتار - روز ۱: درک ماهیت مُدها",
+      "priority": "high",
+      "scheduled_date": "2026-11-12",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 1. INTRO:\n• 1. Roy Ziv - Guitar Modes Navigator - Introduction.mp4\n• 2. Roy Ziv - Guitar Modes Navigator - How To Use The Course.mp4\n\nپوشه 2. UNDERSTANDING MODES:\n• 1. Roy Ziv - Guitar Modes Navigator - What Are Modes_.mp4\n\n- 🎸 تمرین عملی:\nسیم ششم (می) را آزاد بزن. روی سیم اول نت‌های دلخواه بزن و هر از گاهی سیم ششم را بزن تا اثر مرکز تونال روی ملودی را متوجه شوی.",
+      "elapsed_seconds": 1,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [
+        {
+          "id": "2eenou5urmwcq68av",
+          "started_at": 1794438198183,
+          "ended_at": 1794438199687,
+          "elapsed_seconds": 1,
+          "status_at_end": "todo"
+        }
+      ],
+      "id": "gmod_d01_auto",
+      "created_date": "2026-11-12",
+      "completed_at": null
+    },
+    {
+      "title": "گیتار - روز ۲: راز گام مبدا و فواصل",
+      "priority": "high",
+      "scheduled_date": "2026-11-13",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 2. UNDERSTANDING MODES:\n• 2. Roy Ziv - Guitar Modes Navigator - Parent Scale...mp4\n• 3. Roy Ziv - Guitar Modes Navigator - Why Learn 7 Modes...mp4\n• 4. Roy Ziv - Guitar Modes Navigator - How to_think_about...mp4\n\n🎸 تمرین عملی:\nتمرین پرش اکتاو روی سیم ۶ به ۴ و سیم ۵ به ۳ برای مسلط شدن چشم به پیدا کردن اکتاوها.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d02_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۳: تئوری گام ماژور و درجات",
+      "priority": "high",
+      "scheduled_date": "2026-11-14",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 3. THEORY:\n• 1. Roy Ziv - Guitar Modes Navigator - Intro.mp4\n• 2. Roy Ziv - Guitar Modes Navigator - The Major Scale.mp4\n• 3. Roy Ziv - Guitar Modes Navigator - Scale Degrees.mp4\n• 4. Roy Ziv - Guitar Modes Navigator - Diatonic Ch...mp4\n\n🎸 تمرین عملی:\nنوشتن فرمول فواصل ماژور روی کاغذ و ساخت گام ماژور روی سیم ۲ از فرت اول با فواصل پرده و نیم‌پرده.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d03_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۴: آکوردهای دیاتونیک و هارمونی",
+      "priority": "high",
+      "scheduled_date": "2026-11-15",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 3. THEORY:\n• 5. Roy Ziv - Guitar Modes Navigator - Building Ch...mp4\n• 6. Roy Ziv - Guitar Modes Navigator - Why Did We Learn D...mp4\n• 7. Roy Ziv - Guitar Modes Navigator - Practice - Scal...mp4\n• 8. Roy Ziv - Guitar Modes Navigator - Playing Diatoni...mp4\n• 9.0. Roy Ziv - Guitar Modes Navigator - Exercise - Diat...mp4\n\n🎵 بکینگ‌ترک:\n• 9.1. Diatonic Chord Practice - Backing Track.wav\n\n🎸 تمرین عملی:\nاجرای ۷ آکورد پایه همراه با بکینگ‌ترک با صدای تمیز امپ کاتانا.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d04_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۵: سیستم ۳ نت روی هر سیم (3NPS)",
+      "priority": "high",
+      "scheduled_date": "2026-11-16",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 4. LEARNING THE MODES:\n• 1. Intro To Learning The Modes.mp4\n• 2. Important Note On Learning Modes.mp4\n• 3. 3 Notes Per String VS. Caged.mp4\n\n📄 فایل همراه:\n• 4. Picking Pattern + Fingering.pdf\n\n🎸 تمرین عملی:\nاجرای پترن اول پی‌دی‌اف با مترونوم روی تمپو ۶۰ با رعایت پیکینگ یکی‌درمیان.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d05_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۶: تثبیت پترن شماره ۱",
+      "priority": "high",
+      "scheduled_date": "2026-11-17",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 پوشه 4:\nدانلود و بررسی فایل‌های پی‌دی‌اف و گیتارپرو از پوشه‌های ۵ و ۶.\n\n🎸 تمرین عملی:\n۲۰ دقیقه تمرین پترن اول روی تمپو ۷۰. نواختن روی صدای بم ممتد نت دو برای آماده‌سازی گوش.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d06_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۷: آماده‌سازی ورود به مُدها",
+      "priority": "high",
+      "scheduled_date": "2026-11-18",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "🎸 تمرین عملی:\nرساندن پترن اول به تمپو ۸۰ با مترونوم بدون وقفه.\nمرور ذهنی درجات و آمادگی کامل برای شروع مُد آیونین.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d07_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۸: مُد آیونین (Ionian) - معرفی و شکل",
+      "priority": "high",
+      "scheduled_date": "2026-11-19",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 5. IONIAN:\n• 1.0. Intro.mp4\n• 2.0. How To Play Ionian.mp4\n• 2.2. Ionian Fingering.webp\n\n🎸 تمرین عملی:\nحفظ کردن شکل انگشت‌گذاری آیونین و مشخص کردن نت‌های روت و سوم ماژور.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d08_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۹: آیونین - تمرینات تکنیکی ۱ تا ۳",
+      "priority": "high",
+      "scheduled_date": "2026-11-20",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 5. IONIAN:\n• 3.0. Exercise 1 - Up & Down.mp4\n• 4.0. Exercise 2 - String Sets.mp4\n• 5.0. Exercise 3 - Skipping Strings.mp4\n\n🎸 تمرین عملی:\nاجرای تمرین پرش سیمی آیونین با مترونوم روی تمپو ۶۵ و سپس با بکینگ‌ترک‌های تمرینی.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d09_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۱۰: آیونین - نت‌های آکورد و سولو",
+      "priority": "high",
+      "scheduled_date": "2026-11-21",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 5. IONIAN:\n• 6.0. Exercise 4 - Chord Tones.mp4\n• 7.0. Exercise 5 - Key Of D Major.mp4\n• 8.0. Ionian Lick 1.mp4\n• 10.0. Improv Practice - G Ionian Backing...mp4\n\n🎸 تمرین عملی:\nحفظ کردن لیک ۱ و بداهه‌نوازی روی بکینگ‌ترک جی آیونین.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d10_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۱۱: مُد دوریان (Dorian) - ترفند پنتاتونیک",
+      "priority": "high",
+      "scheduled_date": "2026-11-22",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 6. DORIAN:\n• 1.0. Intro.mp4\n• 2.0. How To Play.mp4\n• 3.0. _TIP_ Pentatonic Trick For 'Dorian' Sol...mp4\n\n🎸 تمرین عملی:\nپیدا کردن نت ششم بکار (نت شاخص دوریان) و اضافه کردن آن به باکس پنتاتونیک مینور.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d11_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۱۲: دوریان - تمرینات تکنیکی ۱ تا ۳",
+      "priority": "high",
+      "scheduled_date": "2026-11-23",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 6. DORIAN:\n• 4.0. Exercise 1 - Up & Down.mp4\n• 5.1. Exercise 2 - String Sets.mp4\n• 6.0. Exercise 3 - Skipping Strings.mp4\n\n🎸 تمرین عملی:\nاجرای تمرین پرش سیمی دوریان با مترونوم روی تمپو ۶۵ تا ۷۰.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d12_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۱۳: دوریان - چرخه ۲ مُد و سولو",
+      "priority": "high",
+      "scheduled_date": "2026-11-24",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 6. DORIAN:\n• 7.0. Exercise 4 - Chord Tones.mp4\n• 8.0. 2 Mode Cycles.mp4\n• 10.0. Dorian Lick 1.mp4\n• 12.0. Improv Practice - A Dorian...mp4\n\n🎸 تمرین عملی:\nوصل کردن شکل آیونین به دوریان در تمرین دو مُد و سولو روی بکینگ‌ترک آ دوریان.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d13_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۱۴: مُد فریژین (Phrygian) - معرفی و حس دارک",
+      "priority": "high",
+      "scheduled_date": "2026-11-25",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 7. PHRYGIAN:\n• 1.0. Intro.mp4\n• 2.0. How To Play.mp4\n• 2.2. Phrygian Fingering.webp\n\n🎸 تمرین عملی:\nپیدا کردن نت دوم بمل روی تمام سیم‌ها در پترن فریژین.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d14_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۱۵: فریژین - تمرینات ۱ تا ۴",
+      "priority": "high",
+      "scheduled_date": "2026-11-26",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 7. PHRYGIAN:\n• 3.0. Exercise 1 - Up & Down.mp4\n• 4.0. Exercise 2 - String Sets.mp4\n• 5.0. Exercise 3 - Skipping Strings.mp4\n• 6.0. Exercise 4 - Chord Tones.mp4\n\n🎸 تمرین عملی:\nنواختن تمرینات با مترونوم روی تمپو ۶۵ با صدای کلین کاتانا.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d15_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۱۶: فریژین - چرخه ۳ مُد و سولو",
+      "priority": "high",
+      "scheduled_date": "2026-11-27",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 7. PHRYGIAN:\n• 7.0. 3 Mode Cycles.mp4\n• 9.0. Phrygian Lick 1.mp4\n• 11.0. Improv Practice - B Phrygian...mp4\n\n🎸 تمرین عملی:\nاضافه کردن کمی گین به امپ کاتانا و ریف زدن و سولو روی بکینگ‌ترک بی فریژین.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d16_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۱۷: مُد لیدین (Lydian) - حس فضایی",
+      "priority": "high",
+      "scheduled_date": "2026-11-28",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 8. LYDIAN:\n• 1.0. Intro.mp4\n• 2.0. How To Play.mp4\n• 2.1. Lydian Fingering.webp\n\n🎸 تمرین عملی:\nپیدا کردن نت چهارم دیز (#4) در تمام اکتاوها و زمزمه کردن صدای آن.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d17_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۱۸: لیدین - تمرینات ۱ تا ۴",
+      "priority": "high",
+      "scheduled_date": "2026-11-29",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 8. LYDIAN:\n• 3.0. Exercise 1 - Up & Down.mp4\n• 4.0. Exercise 2 - String Sets.mp4\n• 5.0. Exercise 3 - Skipping Strings.mp4\n• 6.0. Exercise 4 - Chord Tones.mp4\n\n🎸 تمرین عملی:\nاجرای تمرین پرش سیمی لیدین با مترونوم روی تمپو ۷۰.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d18_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۱۹: لیدین - چرخه ۴ مُد و بداهه‌نوازی",
+      "priority": "high",
+      "scheduled_date": "2026-11-30",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 8. LYDIAN:\n• 7.0. 4 Mode Cycles.mp4\n• 9.0. Lydian Lick 1.mp4\n• 11.0. Improv Practice - C Lydian...mp4\n\n🎸 تمرین عملی:\nحرکت پیوسته بین ۴ شکل اول روی دسته گیتار و بداهه‌نوازی با تمرکز روی نت چهارم دیز.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d19_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۲۰: مُد میکسولیدین (Mixolydian) - بلوز و راک",
+      "priority": "high",
+      "scheduled_date": "2026-12-01",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 9. MIXOLYDIAN:\n• 1.0. Intro.mp4\n• 2.0. How To Play.mp4\n• 3.0. _TIP_ Pentatonic Trick For 'Mixolydian'...mp4\n\n🎸 تمرین عملی:\nپیدا کردن نت هفتم بمل (b7) و پیوند آن با پنتاتونیک ماژور.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d20_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۲۱: میکسولیدین - تمرینات و چرخه ۵ مُد",
+      "priority": "high",
+      "scheduled_date": "2026-12-02",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 9. MIXOLYDIAN:\n• 4.0. Exercise 1 - Up & Down.mp4\n• 6.0. Exercise 3 - Skipping Strings.mp4\n• 7.0. Exercise 4 - Chord Tones.mp4\n• 8.0. 5 Mode Cycles.mp4\n\n🎸 تمرین عملی:\nاجرای ۵ شکل اول گام‌ها پشت سر هم در تمرین چرخه ۵ مُد با تمپو ۶۵.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d21_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۲۲: میکسولیدین - سولو و لیک‌ها",
+      "priority": "high",
+      "scheduled_date": "2026-12-03",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 9. MIXOLYDIAN:\n• 10.0. Mixolydian LICK 1.mp4\n• 11.0. Mixolydian LICK 2.mp4\n• 12.0. Improv Practice - D Mixolydian...mp4\n\n🎸 تمرین عملی:\nسولو نوازی با صدای کرانچ امپ کاتانا روی بکینگ‌ترک دی میکسولیدین.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d22_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۲۳: مُد ایولین (Aeolian) - مینور نچرال",
+      "priority": "high",
+      "scheduled_date": "2026-12-04",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 10. AEOLIAN:\n• 1.0. Intro.mp4\n• 2.0. How To Play.mp4\n• 2.1. Aeolian Fingering.webp\n\n🎸 تمرین عملی:\nپیدا کردن نت ششم بمل (b6) و مقایسه آن با نت ششم بکار دوریان.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d23_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۲۴: ایولین - تمرینات و چرخه ۶ مُد",
+      "priority": "high",
+      "scheduled_date": "2026-12-05",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 10. AEOLIAN:\n• 3.0. Exercise 1 - Up & Down.mp4\n• 6.0. Exercise 4 - Chord Tones.mp4\n• 7.0. 6 Mode Cycles.mp4\n• 9.0. Aeolian Lick 1.mp4\n• 10.0. Improv Practice - E Aeolian...mp4\n\n🎸 تمرین عملی:\nسولو زدن با ویبراتور روی بکینگ‌ترک ایولین و اجرای چرخه ۶ مُد.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d24_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۲۵: مُد لوکرین (Locrian) - پنجم بمل",
+      "priority": "high",
+      "scheduled_date": "2026-12-06",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 11. LOCRIAN:\n• 1.0. Intro.mp4\n• 2.0. How To Play.mp4\n• 3.0. Exercise 1 - Up & Down.mp4\n• 4.0. Exercise 2 - String Sets.mp4\n\n🎸 تمرین عملی:\nپیدا کردن نت پنجم بمل (b5) در لوکرین و شنیدن حس تنشن و تعلیق آن.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d25_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۲۶: لوکرین - حل تنشن و سولو",
+      "priority": "high",
+      "scheduled_date": "2026-12-07",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 11. LOCRIAN:\n• 5.0. Exercise 3 - Skipping Strings.mp4\n• 7.0. Locrian Lick.mp4\n• 8.0 Improv Practice - (F Sharp) Locrian...mp4\n\n🎸 تمرین عملی:\nاجرای لیک لوکرین و سولو روی بکینگ‌ترک اف دیز لوکرین.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d26_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۲۷: چرخه کامل ۷ مُد روی فرت‌برد",
+      "priority": "high",
+      "scheduled_date": "2026-12-08",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 12. PRACTICING ALL 7 MODES:\n• 1.0. 7 Mode Cycles.mp4\n• 1.2. 7 Mode Cycles - Backing Track.wav\n• 4.0. Modes Shapes Reference Sheet.pdf\n\n🎸 تمرین عملی:\nنواختن هر ۷ شکل پشت سر هم از فرت ۱ تا ۱۷ با تمپو ۶۵ همراه با بکینگ‌ترک.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d27_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۲۸: مُدهای موازی (Parallel Modes)",
+      "priority": "high",
+      "scheduled_date": "2026-12-09",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 12. PRACTICING ALL 7 MODES:\n• 2.0. Modes In PARALLEL.mp4\n• 2.1. Parallel Modes Exercise - Backing Track.wav\n• 3.0. Final Practice Routine.mp4\n\n🎸 تمرین عملی:\nنواختن تمام ۷ مُد از یک نت روت یکسان (مثلاً نت دو) برای درک شنیداری کامل تفاوت رنگ‌ها.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d28_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۲۹: کاربرد عملی مُدها و نقشه‌خوانی دسته",
+      "priority": "high",
+      "scheduled_date": "2026-12-10",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 13. USING THE MODES:\n• 1.0. How Modes ACTUALLY work.mp4\n• 2.0. Mapping The Neck - Part 1.mp4\n• 3.0. Mapping The Neck - Part 2.mp4\n\n🎸 تمرین عملی:\nپیدا کردن سریع پوزیشن‌های مختلف یک مُد در نقاط مختلف دسته با اتکا به نت روت.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d29_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۳۰: تطبیق مُد با آکورد و تمرین Drone",
+      "priority": "high",
+      "scheduled_date": "2026-12-11",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 13. USING THE MODES:\n• 5.0. Matching Modes To Chords.mp4\n• 6.0. Exercise - Playing The Changes.mp4\n• 7.0. Hearing The Unique_Sound_of Each Mode.mp4\n• 8.0. Exercise - Drone Practice.mp4\n\n🎸 تمرین عملی:\nاجرای تمرین Drone روی نت لا و جابجا شدن بین مُدهای مختلف روی صدای ممتد.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d30_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۳۱: توالی آکورد مُدال و آکوردهای قرضی",
+      "priority": "high",
+      "scheduled_date": "2026-12-12",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 13. USING THE MODES:\n• 9.0. Modal Chord Progressions - Part 1.mp4\n• 10.0. Modal Chord Progressions - Part 2.mp4\n• 11.0. Recognizing Modal Progressions.mp4\n• 14.0. Modal Interchange (Borrowed Chords).mp4\n\n🎸 تمرین عملی:\nتحلیل توالی آکوردهای معروف و تشخیص اینکه کدام مُد برای بداهه‌نوازی روی آن‌ها مناسب است.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d31_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۳۲: پیوند مُدها با پنتاتونیک",
+      "priority": "high",
+      "scheduled_date": "2026-12-13",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 13. USING THE MODES:\n• 15.0. Connecting Modes + Pentatonic.mp4\n• 16.0. Root _A_ Scale Shapes.mp4\n\n🎸 تمرین عملی:\nاستفاده از باکس پنتاتونیک به عنوان اسکلت اصلی و اضافه کردن ۲ نت مُدال به آن در سولو.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d32_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۳۳: سکوئنس‌ها و الگوهای سرعتی",
+      "priority": "high",
+      "scheduled_date": "2026-12-14",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 14. SCALE SEQUENCES:\n• 1.0. Scale Sequences With Modes.mp4\n• 2.0. Practice Routine - Scale in 3rds.mp4\n• 3.0. Linear Sequences.mp4\n• 4.0. Combining Sequences.mp4\n\n🎸 تمرین عملی:\nاجرای سکوئنس فواصل سوم با مترونوم تمپو ۷۰ روی پترن‌های مُدال.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d33_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۳۴: مفاهیم پیشرفته - تریاد و کروماتیک",
+      "priority": "high",
+      "scheduled_date": "2026-12-15",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 15. ADVANCED CONCEPTS:\n• 1.0. Triads Within The Modes.mp4\n• 2.0. Chromatic Lines Inside the Mode Shapes.mp4\n\n🎸 تمرین عملی:\nاضافه کردن نت‌های کروماتیک عبوری به پترن دوریان و لیدین برای رنگ‌آمیزی مدرن.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d34_auto",
+      "created_date": "2026-11-12"
+    },
+    {
+      "title": "گیتار - روز ۳۵: جشن پایان دوره و اجرای سولوی کامل",
+      "priority": "high",
+      "scheduled_date": "2026-12-16",
+      "tags": [
+        "گیتار",
+        "مودز-نویگیتور"
+      ],
+      "activity_id": "j9hzv2dogmvjz7v3u",
+      "status": "todo",
+      "kanban_column": "todo",
+      "description": "📁 ویدیوهای امروز:\nپوشه 15. ADVANCED CONCEPTS:\n• 3.0. Last Words - Course Completion.pdf\n• 4.0. Your Final Thoughts.pdf\n\n🎸 تمرین نهایی:\nانتخاب بکینگ‌ترک مورد علاقه از دوره، نواختن یک سولوی کامل با استفاده از فرمول‌های مُدال، سکوئنس‌ها و خطوط کروماتیک روی امپ کاتانا و ضبط ویدیو از اجرای نهایی.",
+      "elapsed_seconds": 0,
+      "timer_started_at": null,
+      "timeline_slot": null,
+      "timeline_date": null,
+      "intervals": [],
+      "id": "gmod_d35_auto",
+      "created_date": "2026-11-12"
+    }
+  ]
+}
