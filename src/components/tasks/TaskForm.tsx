@@ -236,29 +236,205 @@ export default function TaskForm({ onAdd, activities }: Props) {
                 </button>
               ))}
             </div>
-            <button
-              ref={btnRef}
-              type="button"
-              onClick={() => setShowCal((s) => !s)}
-              className="flex items-center gap-2 rounded-xl px-3 py-2 text-xs transition-all"
-              style={{ border: `1px solid ${cardBorder}`, backgroundColor: cardBg, color: fgMuted }}
-            >
-              📅 {toShamsiShort(selectedDate)}
-            </button>
-            <button
-              type="button"
-              onClick={() => setShowActivityPicker((s) => !s)}
-              className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs transition-all"
-              style={{
-                border: `1px solid ${selectedActivityId ? "#6366f1" : cardBorder}`,
-                backgroundColor: selectedActivityId ? "rgba(99,102,241,0.12)" : cardBg,
-                color: selectedActivityId ? "#818cf8" : fgMuted,
-              }}
-            >
-              <Star className="h-3.5 w-3.5" />
-              {selectedActivityId ? "اکتیویتی انتخاب شد" : "اکتیویتی همیشگی"}
-              <ChevronDown className="h-3 w-3" />
-            </button>
+            <div className="relative" ref={calRef}>
+              <button
+                ref={btnRef}
+                type="button"
+                onClick={() => setShowCal((s) => !s)}
+                className="flex items-center gap-2 rounded-xl px-3 py-2 text-xs transition-all cursor-pointer"
+                style={{ border: `1px solid ${cardBorder}`, backgroundColor: cardBg, color: fgMuted }}
+              >
+                📅 {toShamsiShort(selectedDate)}
+              </button>
+
+              {/* Calendar dropdown */}
+              {showCal && (
+                <div
+                  className="absolute right-0 top-full z-50 mt-1.5 w-72 rounded-2xl p-4 shadow-2xl"
+                  style={{ backgroundColor: bg, border: `1px solid ${cardBorder}` }}
+                  dir="rtl"
+                >
+                  <JalaliCalendar
+                    jy={calJy}
+                    jm={calJm}
+                    onPrev={prevMonth}
+                    onNext={nextMonth}
+                    canNext={true}
+                    todayGreg={todayGreg}
+                    selectedGreg={selectedDate}
+                    onDayClick={handleDayClick}
+                    renderDay={(day, meta) => {
+                      const bg2 = meta.isSelected
+                        ? "#6366f1"
+                        : meta.isToday
+                          ? "rgba(99,102,241,0.15)"
+                          : "transparent";
+                      const color2 = meta.isSelected
+                        ? "#fff"
+                        : meta.isToday
+                          ? "#818cf8"
+                          : `${fgMuted}cc`;
+                      const outline =
+                        meta.isToday && !meta.isSelected ? "1px solid rgba(99,102,241,0.5)" : "none";
+                      return (
+                        <span
+                          className="flex h-full w-full items-center justify-center rounded-lg"
+                          style={{ backgroundColor: bg2, color: color2, outline }}
+                        >
+                          {toPersianDigits(day)}
+                        </span>
+                      );
+                    }}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowCal(false)}
+                    className="mt-3 flex w-full items-center justify-center gap-1 rounded-xl py-2 text-xs transition-colors cursor-pointer"
+                    style={{ border: `1px solid ${cardBorder}`, color: fgMuted }}
+                  >
+                    <X className="h-3 w-3" />
+                    بستن
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <div className="relative" ref={actRef}>
+              <button
+                type="button"
+                onClick={() => setShowActivityPicker((s) => !s)}
+                className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs transition-all cursor-pointer"
+                style={{
+                  border: `1px solid ${selectedActivityId ? "#6366f1" : cardBorder}`,
+                  backgroundColor: selectedActivityId ? "rgba(99,102,241,0.12)" : cardBg,
+                  color: selectedActivityId ? "#818cf8" : fgMuted,
+                }}
+              >
+                <Star className="h-3.5 w-3.5" />
+                {selectedActivityId ? "اکتیویتی انتخاب شد" : "اکتیویتی همیشگی"}
+                <ChevronDown className="h-3 w-3" />
+              </button>
+
+              {/* Activity Picker dropdown */}
+              {showActivityPicker && (
+                <div
+                  className="absolute right-0 top-full z-50 mt-1.5 w-72 rounded-2xl p-4 shadow-2xl"
+                  style={{ backgroundColor: bg, border: `1px solid ${cardBorder}` }}
+                  dir="rtl"
+                >
+                  <div className="mb-3 flex items-center justify-between">
+                    <span className="text-sm font-semibold" style={{ color: fg }}>اکتیویتی‌های همیشگی</span>
+                    <button onClick={() => setShowActivityPicker(false)} style={{ color: fgMuted }}>
+                      <X className="h-4 w-4" />
+                    </button>
+                  </div>
+                  <div className="max-h-48 space-y-1 overflow-y-auto">
+                    {activities.length === 0 && (
+                      <p className="py-4 text-center text-xs" style={{ color: fgMuted }}>هنوز اکتیویتی‌ای تعریف نشده</p>
+                    )}
+                    {activities.map((a) => (
+                      <div key={a.id} className="group flex items-center gap-1.5 w-full">
+                        <button
+                          type="button"
+                          onClick={() => { setSelectedActivityId(a.id); setShowActivityPicker(false); }}
+                          className="flex-1 flex items-center gap-2 rounded-xl px-3 py-2 transition-all text-right min-w-0 cursor-pointer"
+                          style={{
+                            border: `1px solid ${selectedActivityId === a.id ? a.color : cardBorder}`,
+                            backgroundColor: selectedActivityId === a.id ? `${a.color}15` : "transparent",
+                            color: selectedActivityId === a.id ? a.color : fg,
+                          }}
+                        >
+                          <span className="h-3 w-3 flex-shrink-0 rounded-full" style={{ backgroundColor: a.color }} />
+                          <span className="flex-1 text-right text-sm font-medium truncate">{a.name}</span>
+                          {a.tags && a.tags.length > 0 && (
+                            <span className="text-[10px]" style={{ color: fgMuted }}>{toPersianDigits(a.tags.length)} هشتگ</span>
+                          )}
+                        </button>
+                        <button
+                          id={`delete-activity-${a.id}`}
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleDeleteActivity(a);
+                          }}
+                          className="p-1.5 rounded-lg hover:bg-rose-500/15 text-rose-400 hover:text-rose-500 transition-all opacity-0 group-hover:opacity-100 flex-shrink-0 cursor-pointer"
+                          title="حذف اکتیویتی همیشگی"
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-3 pt-3" style={{ borderTop: `1px solid ${cardBorder}` }}>
+                    {!showNewActivityForm ? (
+                      <button
+                        type="button"
+                        onClick={() => setShowNewActivityForm(true)}
+                        className="flex w-full items-center justify-center gap-2 rounded-xl py-2 text-xs transition-all cursor-pointer"
+                        style={{ border: `1px solid ${cardBorder}`, color: fgMuted }}
+                      >
+                        <Plus className="h-3.5 w-3.5" />
+                        اکتیویتی جدید
+                      </button>
+                    ) : (
+                      <div className="space-y-2">
+                        <input
+                          type="text"
+                          value={newActivityName}
+                          onChange={(e) => setNewActivityName(e.target.value)}
+                          placeholder="نام اکتیویتی..."
+                          autoFocus
+                          className="w-full rounded-xl px-3 py-2 text-sm outline-none"
+                          style={{ border: `1px solid ${cardBorder}`, backgroundColor: cardBg, color: fg }}
+                        />
+                        <div className="flex flex-wrap gap-1.5">
+                          {ACTIVITY_COLORS.map((c) => (
+                            <button
+                              key={c}
+                              type="button"
+                              onClick={() => setNewActivityColor(c)}
+                              className="h-6 w-6 rounded-full transition-transform cursor-pointer"
+                              style={{
+                                backgroundColor: c,
+                                transform: newActivityColor === c ? "scale(1.3)" : "scale(1)",
+                                outline: newActivityColor === c ? "2px solid rgba(255,255,255,0.5)" : "none",
+                                outlineOffset: "2px",
+                              }}
+                            />
+                          ))}
+                        </div>
+                        <div className="flex gap-2">
+                          <button
+                            type="button"
+                            onClick={() => { setShowNewActivityForm(false); setNewActivityName(""); }}
+                            className="flex-1 rounded-xl py-2 text-xs cursor-pointer"
+                            style={{ border: `1px solid ${cardBorder}`, color: fgMuted }}
+                          >
+                            لغو
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              if (!newActivityName.trim()) return;
+                              const a = RecurringActivityStore.create({ name: newActivityName.trim(), color: newActivityColor, tags: [] });
+                              setSelectedActivityId(a.id);
+                              setShowNewActivityForm(false);
+                              setNewActivityName("");
+                              setShowActivityPicker(false);
+                              window.dispatchEvent(new CustomEvent("activities-updated"));
+                            }}
+                            disabled={!newActivityName.trim()}
+                            className="flex-1 rounded-xl bg-indigo-500 py-2 text-xs font-medium text-white hover:bg-indigo-600 disabled:opacity-40 cursor-pointer"
+                          >
+                            افزودن
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
             <button
               type="button"
               onClick={() => setShowExtra((s) => !s)}
@@ -367,179 +543,6 @@ export default function TaskForm({ onAdd, activities }: Props) {
           )}
         </div>
       </form>
-
-      {/* Calendar dropdown */}
-      {showCal && (
-        <div
-          ref={calRef}
-          className="absolute left-0 top-full z-50 mt-2 w-72 rounded-2xl p-4 shadow-2xl"
-          style={{ backgroundColor: bg, border: `1px solid ${cardBorder}` }}
-          dir="rtl"
-        >
-          <JalaliCalendar
-            jy={calJy}
-            jm={calJm}
-            onPrev={prevMonth}
-            onNext={nextMonth}
-            canNext={true}
-            todayGreg={todayGreg}
-            selectedGreg={selectedDate}
-            onDayClick={handleDayClick}
-            renderDay={(day, meta) => {
-              const bg2 = meta.isSelected
-                ? "#6366f1"
-                : meta.isToday
-                  ? "rgba(99,102,241,0.15)"
-                  : "transparent";
-              const color2 = meta.isSelected
-                ? "#fff"
-                : meta.isToday
-                  ? "#818cf8"
-                  : `${fgMuted}cc`;
-              const outline =
-                meta.isToday && !meta.isSelected ? "1px solid rgba(99,102,241,0.5)" : "none";
-              return (
-                <span
-                  className="flex h-full w-full items-center justify-center rounded-lg"
-                  style={{ backgroundColor: bg2, color: color2, outline }}
-                >
-                  {toPersianDigits(day)}
-                </span>
-              );
-            }}
-          />
-          <button
-            type="button"
-            onClick={() => setShowCal(false)}
-            className="mt-3 flex w-full items-center justify-center gap-1 rounded-xl py-2 text-xs transition-colors"
-            style={{ border: `1px solid ${cardBorder}`, color: fgMuted }}
-          >
-            <X className="h-3 w-3" />
-            بستن
-          </button>
-        </div>
-      )}
-
-      {/* Activity Picker dropdown */}
-      {showActivityPicker && (
-        <div
-          ref={actRef}
-          className="absolute right-0 top-full z-50 mt-2 w-72 rounded-2xl p-4 shadow-2xl"
-          style={{ backgroundColor: bg, border: `1px solid ${cardBorder}` }}
-          dir="rtl"
-        >
-          <div className="mb-3 flex items-center justify-between">
-            <span className="text-sm font-semibold" style={{ color: fg }}>اکتیویتی‌های همیشگی</span>
-            <button onClick={() => setShowActivityPicker(false)} style={{ color: fgMuted }}>
-              <X className="h-4 w-4" />
-            </button>
-          </div>
-          <div className="max-h-48 space-y-1 overflow-y-auto">
-            {activities.length === 0 && (
-              <p className="py-4 text-center text-xs" style={{ color: fgMuted }}>هنوز اکتیویتی‌ای تعریف نشده</p>
-            )}
-            {activities.map((a) => (
-              <div key={a.id} className="group flex items-center gap-1.5 w-full">
-                <button
-                  type="button"
-                  onClick={() => { setSelectedActivityId(a.id); setShowActivityPicker(false); }}
-                  className="flex-1 flex items-center gap-2 rounded-xl px-3 py-2 transition-all text-right min-w-0"
-                  style={{
-                    border: `1px solid ${selectedActivityId === a.id ? a.color : cardBorder}`,
-                    backgroundColor: selectedActivityId === a.id ? `${a.color}15` : "transparent",
-                    color: selectedActivityId === a.id ? a.color : fg,
-                  }}
-                >
-                  <span className="h-3 w-3 flex-shrink-0 rounded-full" style={{ backgroundColor: a.color }} />
-                  <span className="flex-1 text-right text-sm font-medium truncate">{a.name}</span>
-                  {a.tags && a.tags.length > 0 && (
-                    <span className="text-[10px]" style={{ color: fgMuted }}>{toPersianDigits(a.tags.length)} هشتگ</span>
-                  )}
-                </button>
-                <button
-                  id={`delete-activity-${a.id}`}
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleDeleteActivity(a);
-                  }}
-                  className="p-1.5 rounded-lg hover:bg-rose-500/15 text-rose-400 hover:text-rose-500 transition-all opacity-0 group-hover:opacity-100 flex-shrink-0 cursor-pointer"
-                  title="حذف اکتیویتی همیشگی"
-                >
-                  <Trash2 className="h-4 w-4" />
-                </button>
-              </div>
-            ))}
-          </div>
-          <div className="mt-3 pt-3" style={{ borderTop: `1px solid ${cardBorder}` }}>
-            {!showNewActivityForm ? (
-              <button
-                type="button"
-                onClick={() => setShowNewActivityForm(true)}
-                className="flex w-full items-center justify-center gap-2 rounded-xl py-2 text-xs transition-all"
-                style={{ border: `1px solid ${cardBorder}`, color: fgMuted }}
-              >
-                <Plus className="h-3.5 w-3.5" />
-                اکتیویتی جدید
-              </button>
-            ) : (
-              <div className="space-y-2">
-                <input
-                  type="text"
-                  value={newActivityName}
-                  onChange={(e) => setNewActivityName(e.target.value)}
-                  placeholder="نام اکتیویتی..."
-                  autoFocus
-                  className="w-full rounded-xl px-3 py-2 text-sm outline-none"
-                  style={{ border: `1px solid ${cardBorder}`, backgroundColor: cardBg, color: fg }}
-                />
-                <div className="flex flex-wrap gap-1.5">
-                  {ACTIVITY_COLORS.map((c) => (
-                    <button
-                      key={c}
-                      type="button"
-                      onClick={() => setNewActivityColor(c)}
-                      className="h-6 w-6 rounded-full transition-transform"
-                      style={{
-                        backgroundColor: c,
-                        transform: newActivityColor === c ? "scale(1.3)" : "scale(1)",
-                        outline: newActivityColor === c ? "2px solid rgba(255,255,255,0.5)" : "none",
-                        outlineOffset: "2px",
-                      }}
-                    />
-                  ))}
-                </div>
-                <div className="flex gap-2">
-                  <button
-                    type="button"
-                    onClick={() => { setShowNewActivityForm(false); setNewActivityName(""); }}
-                    className="flex-1 rounded-xl py-2 text-xs"
-                    style={{ border: `1px solid ${cardBorder}`, color: fgMuted }}
-                  >
-                    لغو
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (!newActivityName.trim()) return;
-                      const a = RecurringActivityStore.create({ name: newActivityName.trim(), color: newActivityColor, tags: [] });
-                      setSelectedActivityId(a.id);
-                      setShowNewActivityForm(false);
-                      setNewActivityName("");
-                      setShowActivityPicker(false);
-                      window.dispatchEvent(new CustomEvent("activities-updated"));
-                    }}
-                    disabled={!newActivityName.trim()}
-                    className="flex-1 rounded-xl bg-indigo-500 py-2 text-xs font-medium text-white hover:bg-indigo-600 disabled:opacity-40"
-                  >
-                    افزودن
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
 
       {activityToDelete && (
         <DeleteConfirmationModal

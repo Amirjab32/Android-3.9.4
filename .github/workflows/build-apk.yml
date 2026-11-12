@@ -31,14 +31,11 @@ jobs:
 
       - name: Install Dependencies & Setup Capacitor
         run: |
-          if [ ! -f package.json ]; then
-            npm init -y
-          fi
-          npm install @capacitor/core @capacitor/cli @capacitor/android
+          npm install
 
-      - name: Build Web Assets (Optional)
+      - name: Build Web Assets
         run: |
-          npm run build --if-present
+          npm run build
 
       - name: Initialize Capacitor and Sync Android
         run: |

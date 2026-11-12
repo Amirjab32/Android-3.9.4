@@ -1623,7 +1623,8 @@ export default function PlannerView() {
                                               {parsed.activity.name.replace(/^#/, "")}
                                             </span>
                                             {parsed.tagText && (
-                                              <div className="flex items-center gap-1.5 flex-wrap">
+                                              <div className="flex items-center gap-1.5 flex-wrap opacity-80">
+                                                <span className="text-zinc-600 text-[11px] select-none">↳</span>
                                                 {parsed.tagText
                                                   .split(/\s+/)
                                                   .map(t => t.replace(/^#+/, "").trim())
@@ -1631,9 +1632,10 @@ export default function PlannerView() {
                                                   .map((tag, tIdx) => (
                                                     <span 
                                                       key={tIdx} 
-                                                      className="text-[11px] bg-amber-500/10 text-amber-300 px-2 py-0.5 rounded-md font-sans font-medium border border-amber-500/20 tracking-normal shadow-sm"
+                                                      className="inline-flex items-center gap-0.5 text-[9.5px] text-zinc-500 bg-white/[0.02] px-1.5 py-0.5 rounded border border-white/[0.06] font-sans tracking-normal select-none"
                                                     >
-                                                      {tag}
+                                                      <span className="text-zinc-600 text-[8.5px]">#</span>
+                                                      <span>{tag}</span>
                                                     </span>
                                                   ))
                                                 }
@@ -1652,7 +1654,7 @@ export default function PlannerView() {
                                 
                                 {activeSubjectDropdown === entry.id && (
                                   <div 
-                                    className={`absolute left-0 w-64 rounded-2xl border shadow-2xl p-3 z-30 overflow-y-auto max-h-60 select-none text-right ${
+                                    className={`absolute right-0 w-64 rounded-2xl border shadow-2xl p-3 z-30 overflow-y-auto max-h-60 select-none text-right ${
                                       isOpenUpwards ? "bottom-full mb-1.5" : "top-full mt-1.5"
                                     }`}
                                     style={{ backgroundColor: sidebarBg, borderColor: cardBorder }}
